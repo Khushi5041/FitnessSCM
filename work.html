@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner</title>
+    <link rel="stylesheet" href="meal2.css">
+    <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+
+</head>
+
+<body>
+    <div class="banner2">
+        <div class="navbar">
+            <img src="logo.png" class="logo">
+             <ul>
+                <li><a href="1stpage.html">Home</a></li>
+                <li><a href="1stpage.html">Features</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="dashboard.html"> Back </a></li>
+            </ul>
+        </div>
+
+        <h1 class="banner-title">Workout Records</h1>
+        <div class="form-container">
+            <form id="transactionForm">
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+                  
+                
+                <label for="workout">Workout </label>
+                <input type="text" id="workout" placeholder="Enter Workout" required>
+
+               
+
+                <label for="workoutdetails">Workout Details</label>
+                <input type="text" id="workoutdetails" placeholder="Enter Workout Details" required>
+
+                <label for="calories">Calories Burnt</label>
+                <input type="number" id="calories" placeholder="Enter Calories Burnt" required>
+
+                <button type="button" onclick="addRecord()">Add Record</button>
+            </form>
+        </div>
+
+
+<div class="result">
+        <div class="table-container">
+            <table id="transactionTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Workout</th>
+                        <th>Workout Details</th>
+                        <th>Calories Burnt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Transaction rows will be populated here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    <footer>
+        <div class="aboutus" id="aboutus">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p>Email:Info@fitnfine.com</p>
+                <p>Phone:+91 xxxxxx xxxxx</p>
+                <p>Address:123 street, Fall Avenue, New Delhi</p>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                 <ul class="list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#aboutus">About Us</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="explore.html">Explore More</a></li>
+                 </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                 <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                 <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                 <li><a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin"></i></a></li>
+                 <li><a href="https://www.behance.net/"><i class="fab fa-behance"></i></a></li>
+                </ul>
+                </div>
+        </div>
+        
+        <div class="bottom-bar">
+            <p>&copy; 2024 FIT N FINE. All rights reserved</p>
+        </div>
+    </footer>
+
+
+
+
+
+    <script>
+        const transactionData = [];
+        const tableBody = document.getElementById('transactionTable').querySelector('tbody');
+
+        function addRecord() {
+            const date = document.getElementById('date').value;
+            const workout = document.getElementById('workout').value;
+            const workoutdetails = document.getElementById('workoutdetails').value;
+            const calories = document.getElementById('calories').value;
+
+            if (date && workout && workoutdetails && calories) {
+                const transaction = { date, workout, workoutdetails, calories };
+                transactionData.push(transaction);
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${transaction.date}</td>
+                    <td>${transaction.workout}</td>
+                    <td>${transaction.workoutdetails}</td>
+                    <td>${transaction.calories}</td>
+                `;
+                tableBody.appendChild(row);
+
+                document.getElementById('transactionForm').reset();
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+    </script>
+</body>
+
+</html>

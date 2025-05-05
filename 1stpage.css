@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),  rgba(0,0,0,0.75)), url(background.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 100%;
+    height: 25px;
+    background-color: #080515;
+    margin: auto;
+    padding: 20px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    padding:15px 20px;
+    margin-top: 5px;
+    width: 100px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 5px 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: rgb(6, 111, 192);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover:after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.content h1{
+    font-size: 50px;
+    margin-top: 80px;
+}
+
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid rgb(6, 111, 192);
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: rgb(6, 111, 192) ;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+}
+
+.features{
+    height: 700px;
+    width:1520px;
+    background-color: rgb(168, 175, 180);
+}
+
+
+
+
+
+.aboutus{
+    height:200px;
+    background-color: rgb(70, 69, 69);
+    width: 1500px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+footer{
+    background:rgb(70, 69, 69);
+    padding-top: 50px;
+}
+
+.footer-content{
+    width: 33.3%;
+}
+
+h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    color:#aeaaaa
+}
+.footer-content p{
+    width:190px;
+    margin: auto;
+    padding: 7px;
+    color:whitesmoke;
+}
+.footer-content ul li{
+    text-align: center;
+     text-decoration: none;
+    text-transform: uppercase;
+}
+.list{
+    padding: 0;
+}
+.list li{
+    width: auto;
+    text-align: center;
+    list-style-type:none;
+    padding: 7px;
+    position: relative;
+    color:whitesmoke;
+}
+.list li::before{
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: rgb(6, 111, 192);
+    transition-duration: .5s;
+   
+}
+.list li:hover::before{
+    width: 70px;
+}
+.social-icons{
+    text-align: center;
+    padding: 0;
+}
+.social-icons li{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+.social-icons i{
+    color: white;
+    font-size: 25px;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+a:hover{
+    color: rgb(6, 111, 192);
+}
+.social-icons i:hover{
+    color: rgb(6, 111, 192);
+}
+.bottom-bar{
+    background: rgb(6, 111, 192);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+.bottom-bar p{
+    color: #343434;
+    margin: 0;
+    font-size: 16px;
+   padding: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+.pic{
+    padding: 15px;
+	float:left;
+	margin-left:200px;
+}
+
+.pic1{
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px rgb(35, 67, 75);
+}
+
+.info{
+	height:200px;
+	width:400px;
+	margin-left:800px;
+	padding-top:30px;
+	
+}
+.goals{
+
+	float:right;
+	margin-right:200px;
+	padding-top:100px;
+}
+
+.pic2{
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px rgb(35, 67, 75);
+}
+
+.text{
+	height:200px;
+      width:400px;
+      float:left;
+	margin-left:220px;
+	padding-top:80px;
+}

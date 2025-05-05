@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(signin.png);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .login-container {
+            width: 450px;
+            padding: 30px;
+            background-color: #ffffffdc;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            padding-top: 50px;
+            margin-left: 630px;
+            margin-top: 150px;
+        }
+        .botn {
+            padding: 12px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 150px;
+            position: relative;
+            left: 30%;
+            margin-bottom: 10px;
+        }
+        .botn:hover {
+            background-color: #2575a1;
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+            color: #2980b9;
+            font-weight: 700;
+        }
+        .input-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .input-group input {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        .input-group input:focus {
+            outline: none;
+            border-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="return validateLogin();">
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" placeholder="Enter Name" id="username" name="username">
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" placeholder="Enter Password" id="password" name="password">
+            </div>
+            <input class="botn" type="submit" value="Login">
+            <p id="errorMessage" class="error"></p>
+        </form>
+        <p class="text-center">Don't have an account? <a href="signup1.html">Sign up</a></p>
+    </div>
+  
+    <script>
+ 
+        function validateLogin() {
+ 
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            if (username === "" || password === "") {
+                alert("Both fields are required!");
+                return false; 
+            } else {
+                window.location.href = "dashboard.html"; 
+                return false; 
+            }
+        }
+    </script>
+</body>
+</html>
